@@ -19,6 +19,7 @@
    itemRelease specifies the game's release date
    itemSummary provides the HTML code that summarizes the game
    
+   ARRAYS:
    ratings is an array of customer ratings of the game on a 1 - 5 star range
    ratingTitles is an array of titles of the customer reviews
    ratingAuthors is an array of review authors

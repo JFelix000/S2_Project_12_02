@@ -18,16 +18,19 @@ document.getElementsByTagName('article')[0].innerHTML = gameReport;
 var ratingsSum = 0;
 var ratingsCount = ratings.length;
 
-for(i = 0; i < ratings.length; i = ratingsSum + ratingsCount) {
-    ratingsAvg = ratingsSum/ratingsCount;
-    ratingReport = "<h1>Customer Reviews</h1> <h2>" + ratingsAvg + "out of 5 stars (" + ratingsCount + "reviews)</h2>";
+for(var i = 0; i <= ratingsCount; i = (ratingsSum + ratings)) {
+    ratings[i] + ratingsSum[i];
+}
+var ratingsAvg = ratingsSum / ratingsCount;
+var ratingReport = "<h1>Customer Reviews</h1> <h2>" + ratingsAvg + " out of 5 stars (" + ratingsCount + " reviews)</h2>";
+
+for(var i = 0; i <= 2; i++) {
+    ratingReport += "<div class='review'> <h1>" + ratingTitles[i] + "</h1> <table> <tr><th>By</th><td>" + ratingAuthors[i] + "</td></tr> <tr><th>Review Date</th><td>" + ratingDates[i] + "</td></tr> <tr><th>Rating</th><td>";
+    //nested for loop
+    for(var j = 1; j <= 5; j++) { //not sure about the: i <= ratings
+        ratingReport += "<img src='hg_star.png' />";
+    }
+    ratingReport += "</td></tr></table> " + ratingSummaries[i] + "</div>";
 }
 
-for(var i = 0; i > 3; i++) {
-    ratingReport += "div class=”review”> <h1>" + ratingTitles + "</h1> <table> <tr><th>By</th><td>" + ratingAuthors + "</td></tr> <tr><th>Review Date</th><td>" + ratingDates + "</td></tr> <tr><th>Rating</th><td>";
-    for(var z = 1; i >= 5; i++) {
-        ratingReport += "<img src=”hg_star.png” />";
-    }
-        ratingReport += "</td></tr></table>" + ratingSummaries + "</div>";
-}
 document.getElementsByTagName('aside')[0].innerHTML = ratingReport;
